@@ -23,40 +23,35 @@ if (EXISTS ${picoVscode})
     include(${picoVscode})
 endif()
 # ====================================================================================
-set(PICO_BOARD pico_w CACHE STRING "Board type")
+set(PICO_BOARD pico2 CACHE STRING "Board type")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(Led_sequencial C CXX ASM)
+project(Teste C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Led_sequencial Led_sequencial.c )
+add_executable(Teste Teste.c )
 
-pico_set_program_name(Led_sequencial "Led_sequencial")
-pico_set_program_version(Led_sequencial "0.1")
+pico_set_program_name(Teste "Teste")
+pico_set_program_version(Teste "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(Led_sequencial 0)
-pico_enable_stdio_usb(Led_sequencial 0)
+pico_enable_stdio_uart(Teste 0)
+pico_enable_stdio_usb(Teste 0)
 
 # Add the standard library to the build
-target_link_libraries(Led_sequencial
+target_link_libraries(Teste
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(Led_sequencial PRIVATE
+target_include_directories(Teste PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
-# Add any user requested libraries
-target_link_libraries(Led_sequencial 
-        
-        )
-
-pico_add_extra_outputs(Led_sequencial)
+pico_add_extra_outputs(Teste)
 
