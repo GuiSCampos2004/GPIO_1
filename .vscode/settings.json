@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "ledsequencial.h": "c"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/Aulo/Desktop/Programação/GPIO_1/Led_sequencial"
 }
