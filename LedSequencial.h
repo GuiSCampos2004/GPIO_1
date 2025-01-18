@@ -21,7 +21,6 @@ void init_leds()
         LED2_R, LED2_G, LED2_B,
         LED3_R, LED3_G, LED3_B};
 
-
     // Inicializa todos os leds
     for (int i = 0; i < 9; i++)
     {
@@ -30,21 +29,24 @@ void init_leds()
     }
 }
 
-void led_sequence() {
+void led_sequence()
+{
     // Matriz com todos os pinos organizados por LED
     const uint8_t leds[][3] = {
-        {LED1_R, LED1_G, LED1_B},  // LED 1
-        {LED2_R, LED2_G, LED2_B},  // LED 2
-        {LED3_R, LED3_G, LED3_B}   // LED 3
+        {LED1_R, LED1_G, LED1_B}, // LED 1
+        {LED2_R, LED2_G, LED2_B}, // LED 2
+        {LED3_R, LED3_G, LED3_B}  // LED 3
     };
-    
+
     // Loop para cada LED
-    for(int led = 0; led < 3; led++) {
+    for (int led = 0; led < 3; led++)
+    {
         // Loop para cada cor (R,G,B)
-        for(int cor = 0; cor < 3; cor++) {
-            gpio_put(leds[led][cor], 1);  // Liga
-            sleep_ms(100);                // Espera 100ms
-            gpio_put(leds[led][cor], 0);  // Desliga
+        for (int cor = 0; cor < 3; cor++)
+        {
+            gpio_put(leds[led][cor], 1); // Liga
+            sleep_ms(100);               // Espera 100ms
+            gpio_put(leds[led][cor], 0); // Desliga
         }
     }
 }
