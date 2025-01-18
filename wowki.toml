@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/arquivotest.c.uf2'
-elf = 'build/arquivotest.c.elf'
+firmware = 'build/LedSequencial.c.uf2'
+elf = 'build/LedSequencial.c.elf'
