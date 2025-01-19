@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/LedSequencial.uf2'
-elf = 'build/LedSequencial.elf'
+firmware = 'build/main.uf2'
+elf = 'build/main.elf'
