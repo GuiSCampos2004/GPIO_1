@@ -33,8 +33,8 @@ void init_leds()
     // Inicializa todos os leds
     for (int i = 0; i < 9; i++)
     {
-        gpio_init(pins[i + 15]);
-        gpio_set_dir(pins[i + 15], GPIO_OUT);
+        gpio_init(pins[i]);
+        gpio_set_dir(pins[i], GPIO_OUT);
     }
 }
 
