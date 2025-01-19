@@ -104,6 +104,11 @@ int main()
 
             switch (key)
             {
+            case '7':
+                led_vermelho_azul(pins);
+                show_menu = true;
+                break;
+
             case '8':
                 led_sequence(pins);
                 show_menu = true;
