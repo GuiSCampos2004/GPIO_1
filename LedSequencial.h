@@ -1,5 +1,5 @@
-#ifndef LedSequencial.h
-#define LedSequencial .h
+#ifndef LedSequencial_h
+#define LedSequencial_h
 #include "pico/stdlib.h"
 
 // Definições dos pinos dos LEDs RGB
