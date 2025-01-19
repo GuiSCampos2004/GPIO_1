@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-
-uint colunas[4]={0,1,2,3}; //Variáveis necessárias uma vez que funções 
-uint linhas[4]={4,5,6,7}; //gpio precisam de parametros do tipo uint
-
 #define LED1_R 16
 #define LED1_G 17
 #define LED1_B 18
@@ -15,6 +11,11 @@ uint linhas[4]={4,5,6,7}; //gpio precisam de parametros do tipo uint
 #define LED3_G 26
 #define LED3_B 27
 #define BUZZ 10
+
+
+uint colunas[4]={0,1,2,3}; //Variáveis necessárias uma vez que funções 
+uint linhas[4]={4,5,6,7}; //gpio precisam de parametros do tipo uint
+uint OUTs[10] = {LED1_R,LED1_G,LED1_B,LED2_R,LED2_G,LED2_B,LED3_R,LED3_G,LED3_B,BUZZ};
 
 //--------------------------------------------------------------------------------------------
 char leitura() { //Função que realiza leitura das teclas
@@ -41,6 +42,9 @@ char leitura() { //Função que realiza leitura das teclas
 int main() {
 
   char tecla; //Essa variável irá receber o valor da tecla apertada
+  bool mostra_menu=false;
+
+
   for (int i = 0; i < 4; i++) {
     gpio_init(colunas[i]); //Inicializa porta das colunas
     gpio_set_dir(colunas[i], GPIO_IN); //Configura as portas como entrada
@@ -51,10 +55,116 @@ int main() {
     gpio_set_dir(linhas[i], GPIO_OUT); //Configura as portas como saída
     gpio_put(linhas[i], 1); //Coloca as linhas em estado high
   }
+  for (int i = 0; i < 10; i++){
+    gpio_init(OUTs[i]);
+    gpio_set_dir(OUTs[i], GPIO_OUT);
+  }
+
+  stdio_init_all();
+  busy_wait_us(1000000); // Aguarda 1 segundo para garantir que o stdio está pronto
+
+  menu();
 
   while (true) {
+    
     tecla = leitura();
-    //A partir daqui havera a relação entre o valor de 'tecla' e os OUTPUT's
+
+    if (tecla != 'X'){ // Se uma tecla foi pressionada
+      printf("\nTecla pressionada: %c\n", tecla);
+
+      switch (tecla){
+        case '1':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case '2':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case '3':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case '4':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case '5':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case '6':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case '7':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case '8':
+
+          led_sequence(OUTs);
+          mostra_menu = true;
+          break;
+
+        case '9':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case 'A':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case 'B':
+        
+
+          mostra_menu = true;
+          break;
+
+        case 'C':
+          
+          
+          mostra_menu = true;
+          break;
+
+        case 'D':
+          
+          
+          mostra_menu = true;
+          break;
+
+      default:
+        printf("Nenhuma acao definida para a tecla %c\n", tecla);
+        busy_wait_us(500000); // Meio segundo
+        mostra_menu = true;
+        break;
+      }
+
+      if (mostra_menu){
+        menu();
+        mostra_menu = false;
+      }
+    }
+
+    busy_wait_us(50000); // 50ms para responsividade
   }
   
   return 0;
