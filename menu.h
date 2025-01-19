@@ -1,5 +1,5 @@
-#ifndef menu_h
-#define menu_h
+#ifndef MENU_H
+#define MENU_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,13 +10,14 @@ int menu()
 
     system("cls");
 
-    printf("Sistema iniciado.Pressione teclas\n");
-
-    printf("Sua escolha: ");
+    printf("=== Sistema Iniciado ===\n");
+    printf("Pressione uma tecla para escolher uma opcao:\n\n");
+    printf("8 - Acender os LEDs sequencialmente\n");
+    printf("\nSua escolha: ");
 
     scanf("%d", &escolha);
 
     return escolha;
 }
 
-#endif
+#endif // MENU_H
