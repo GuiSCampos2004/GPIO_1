@@ -22,14 +22,13 @@ const char keymap[16] = {
     '7', '8', '9', 'C',
     '*', '0', '#', 'D'};
 
+const uint8_t pins[] = {
+    LED1_R, LED1_G, LED1_B,
+    LED2_R, LED2_G, LED2_B,
+    LED3_R, LED3_G, LED3_B};
+
 void init_leds()
 {
-    // Matriz com todos os pinos
-    const uint8_t pins[] = {
-        LED1_R, LED1_G, LED1_B,
-        LED2_R, LED2_G, LED2_B,
-        LED3_R, LED3_G, LED3_B};
-
     // Inicializa todos os leds
     for (int i = 0; i < 9; i++)
     {

@@ -13,11 +13,14 @@
 #define LED3_G 26
 #define LED3_B 27
 
-void led_sequence(const uint8_t leds[][3], size_t num_leds) {
+void led_sequence(const uint8_t leds[][3], size_t num_leds)
+{
     // Loop para cada LED
-    for (size_t led = 0; led < num_leds; led++) {
+    for (size_t led = 0; led < num_leds; led++)
+    {
         // Loop para cada cor (R, G, B)
-        for (size_t cor = 0; cor < 3; cor++) {
+        for (size_t cor = 0; cor < 3; cor++)
+        {
             gpio_put(leds[led][cor], 1); // Liga
             sleep_ms(100);               // Espera 100ms
             gpio_put(leds[led][cor], 0); // Desliga
