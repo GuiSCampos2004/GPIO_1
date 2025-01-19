@@ -3,8 +3,8 @@
 #include "LedSequencial.h"
 
 // Define os pinos do teclado com as portas GPIO
-uint columns[4] = {13, 12, 11, 10};
-uint rows[4] = {9, 8, 7, 6};
+uint columns[4] = {10, 11, 12, 13};
+uint rows[4] = {6, 7, 8, 9};
 
 #define LED1_R 16
 #define LED1_G 17
