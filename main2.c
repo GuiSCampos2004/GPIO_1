@@ -11,11 +11,11 @@
 #define LED3_R 22
 #define LED3_G 26
 #define LED3_B 27
-#define BUZZ 10
+#define BUZZ 14
 
 
-uint colunas[4]={0,1,2,3}; //Variáveis necessárias uma vez que funções 
-uint linhas[4]={4,5,6,7}; //gpio precisam de parametros do tipo uint
+uint colunas[4]={9,8,7,6}; //Variáveis necessárias uma vez que funções 
+uint linhas[4]={13,12,11,10}; //gpio precisam de parametros do tipo uint
 uint OUTs[10] = {LED1_R,LED1_G,LED1_B,LED2_R,LED2_G,LED2_B,LED3_R,LED3_G,LED3_B,BUZZ};
 
 //--------------------------------------------------------------------------------------------
