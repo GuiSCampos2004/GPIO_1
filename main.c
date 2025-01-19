@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "menu.h"
 #include "LedSequencial.h"
+#include "LedVermelhoAzul.h"
 
 // Define os pinos do teclado com as portas GPIO
 uint columns[4] = {10, 11, 12, 13};
