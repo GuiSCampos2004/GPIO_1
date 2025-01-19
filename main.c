@@ -83,15 +83,15 @@ char pico_keypad_get_key()
 int main()
 {
     stdio_init_all();
-
     init_leds();
     pico_keypad_init();
-
     printf("Sistema iniciado. Pressione teclas.\n");
 
-    while (true)
+    char key;
+
+    do
     {
-        char key = pico_keypad_get_key();
+        key = pico_keypad_get_key(); // Obtém a tecla pressionada
 
         if (key != 0)
         { // Se uma tecla foi pressionada
@@ -101,14 +101,19 @@ int main()
             {
                 led_sequence(pins); // Executa a sequência de LEDs
             }
+            else if (key == 'D')
+            {
+                printf("Saindo do loop...\n");
+                break; // Sai do loop quando a tecla 'D' é pressionada
+            }
             else
             {
-                printf("Nenhuma tecla pressionada");
+                printf("Nenhuma ação definida para a tecla pressionada.\n");
             }
         }
 
         busy_wait_us(500000); // Aguarda meio segundo
-    }
+    } while (true); // Loop infinito (será interrompido pelo 'break')
 
     return 0;
 }
