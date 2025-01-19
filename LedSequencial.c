@@ -97,7 +97,7 @@ int main()
 
             if (key == '8')
             {
-                led_sequence(); // Executa a sequência de LEDs
+                led_sequence(pins); // Executa a sequência de LEDs
             }
             else
             {
