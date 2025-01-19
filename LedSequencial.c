@@ -13,8 +13,8 @@ const char keymap[16] = {
     {'7', '8', '9', 'C'},
     {'*', '0', '#', 'D'}};
 
-int main()
-{
-    stdio_init_all();
-
-}
+uint _columns[4];
+uint _rows[4];
+char _matrix_values[16];
+uint all_columns_mask = 0x0;
+uint column_mask[4];
