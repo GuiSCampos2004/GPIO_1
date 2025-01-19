@@ -21,8 +21,7 @@ const char keymap[16] = {
     'D', 'C', 'B', 'A',
     '#', '9', '6', '3',
     '0', '8', '5', '2',
-    '*', '7', '4', '1'
-};
+    '*', '7', '4', '1'};
 
 const uint8_t pins[] = {
     LED1_R, LED1_G, LED1_B,
@@ -84,38 +83,48 @@ char pico_keypad_get_key()
 int main()
 {
     stdio_init_all();
+    busy_wait_us(1000000); // Aguarda 1 segundo para garantir que o stdio está pronto
+
     init_leds();
     pico_keypad_init();
-    printf("Sistema iniciado. Pressione teclas.\n");
+
+    menu();
 
     char key;
+    bool show_menu = false;
 
     do
     {
-        menu();
-        key = pico_keypad_get_key(); // Obtém a tecla pressionada
+        key = pico_keypad_get_key();
 
-        if (key != 0)
-        { // Se uma tecla foi pressionada
-            printf("Tecla pressionada: %c\n", key);
+        if (key != 0) // Se uma tecla foi pressionada
+        {
+            printf("\nTecla pressionada: %c\n", key);
 
-            if (key == '8')
+            switch (key)
             {
-                led_sequence(pins); // Executa a sequência de LEDs
+            case '8':
+                led_sequence(pins);
+                show_menu = true;
+                break;
+
+            default:
+                printf("Nenhuma acao definida para a tecla %c\n", key);
+                busy_wait_us(500000); // Meio segundo
+                show_menu = true;
+                break;
             }
-            else if (key == 'D')
+
+            if (show_menu)
             {
-                printf("Saindo do loop...\n");
-                break; // Sai do loop quando a tecla 'D' é pressionada
-            }
-            else
-            {
-                printf("Nenhuma ação definida para a tecla pressionada.\n");
+                menu();
+                show_menu = false;
             }
         }
 
-        busy_wait_us(500000); // Aguarda meio segundo
-    } while (true); // Loop infinito (será interrompido pelo 'break')
+        busy_wait_us(50000); // 50ms para responsividade
+
+    } while (true);
 
     return 0;
 }
