@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "LedSequencial.h"
 
 // Define os pinos do teclado com as portas GPIO
 uint columns[4] = {10, 11, 12, 13};
@@ -21,12 +22,13 @@ const char keymap[16] = {
     '7', '8', '9', 'C',
     '*', '0', '#', 'D'};
 
+const uint8_t pins[] = {
+    LED1_R, LED1_G, LED1_B,
+    LED2_R, LED2_G, LED2_B,
+    LED3_R, LED3_G, LED3_B};
+
 void init_leds()
 {
-    const uint8_t pins[] = {
-        LED1_R, LED1_G, LED1_B,
-        LED2_R, LED2_G, LED2_B,
-        LED3_R, LED3_G, LED3_B};
 
     // Inicializa todos os leds
     for (int i = 0; i < 9; i++)
@@ -49,19 +51,6 @@ void pico_keypad_init()
 
         gpio_set_dir(rows[i], GPIO_OUT);
         gpio_put(rows[i], 0); // Inicialmente desativa todas as linhas
-    }
-}
-
-void led_sequence()
-{
-    // Loop para cada LED
-    for (size_t led = 16; led < 28; led++)
-    {
-        // Loop para cada cor (R, G, B)
-
-        gpio_put(led, 1); // Liga
-        sleep_ms(500);    // Espera 100ms
-        gpio_put(led, 0); // Desliga
     }
 }
 
