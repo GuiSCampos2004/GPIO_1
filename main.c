@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
+
 uint colunas[4]={0,1,2,3}; //Variáveis necessárias uma vez que funções 
 uint linhas[4]={4,5,6,7}; //gpio precisam de parametros do tipo uint
 
