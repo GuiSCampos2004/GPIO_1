@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "menu.h"
 #include "LedSequencial.h"
 
 // Define os pinos do teclado com as portas GPIO
