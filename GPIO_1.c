@@ -44,7 +44,6 @@ int main() {
   gpio_init(28);
   gpio_set_dir(28, GPIO_OUT);
 
-
   while (true) {
     tecla = leitura();
     //A partir daqui havera a relação entre o valor de 'tecla' e os OUTPUT's
