@@ -60,7 +60,7 @@ void led_sequence()
         // Loop para cada cor (R, G, B)
 
         gpio_put(led, 1); // Liga
-        sleep_ms(100);    // Espera 100ms
+        sleep_ms(500);    // Espera 100ms
         gpio_put(led, 0); // Desliga
     }
 }
