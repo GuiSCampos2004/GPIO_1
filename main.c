@@ -119,8 +119,6 @@ int main() {
           gpio_put(LED2_G, 0);
           gpio_put(LED3_G, 0);
           sleep_ms(100);
-          
-          
           mostra_menu = true;
           break;
 
