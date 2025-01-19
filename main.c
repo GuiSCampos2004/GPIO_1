@@ -91,6 +91,7 @@ int main()
 
     do
     {
+        menu();
         key = pico_keypad_get_key(); // Obtém a tecla pressionada
 
         if (key != 0)
