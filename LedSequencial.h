@@ -13,22 +13,6 @@
 #define LED3_G 26
 #define LED3_B 27
 
-void init_leds()
-{
-    // Matriz com todos os pinos
-    const uint8_t pins[] = {
-        LED1_R, LED1_G, LED1_B,
-        LED2_R, LED2_G, LED2_B,
-        LED3_R, LED3_G, LED3_B};
-
-    // Inicializa todos os leds
-    for (int i = 0; i < 9; i++)
-    {
-        gpio_init(pins[i]);
-        gpio_set_dir(pins[i], GPIO_OUT);
-    }
-}
-
 void led_sequence()
 {
     // Matriz com todos os pinos organizados por LED
