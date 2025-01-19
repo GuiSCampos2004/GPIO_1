@@ -81,8 +81,16 @@ int main() {
           break;
 
         case '2':
-          
-          
+    gpio_put(LED1_R, 0);
+    gpio_put(LED1_G, 1);
+    gpio_put(LED1_B, 0);
+    gpio_put(LED2_R, 0);
+    gpio_put(LED2_G, 1);
+    gpio_put(LED2_B, 0);
+    gpio_put(LED3_R, 0);
+    gpio_put(LED3_G, 1);
+    gpio_put(LED3_B, 0);
+
           mostra_menu = true;
           break;
 
