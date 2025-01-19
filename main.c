@@ -75,8 +75,9 @@ int main() {
 
       switch (tecla){
         case '1':
-          
-          
+          gpio_put(BUZZ,1);
+          sleep_ms(100);
+          gpio_put(BUZZ,0);
           mostra_menu = true;
           break;
 
