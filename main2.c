@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "menu.h"
 
 #define LED1_R 16
 #define LED1_G 17
@@ -36,6 +37,16 @@ char leitura() { //Função que realiza leitura das teclas
         gpio_put(linhas[i], 1);
     }
     return 'X'; //Caso nenhuma tecla seja apertada, retorna um valor que não interfere em futuros if's
+}
+//--------------------------------------------------------------------------------------------
+
+void led_sequence(uint8_t leds[])
+{
+    for (int i = 0; i < 9; i++)
+    {
+        gpio_put(leds[i], 1);
+        gpio_put(leds[i], 0);
+    }
 }
 //--------------------------------------------------------------------------------------------
 
