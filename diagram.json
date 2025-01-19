@@ -34,7 +34,13 @@
       "rotate": 90,
       "attrs": { "value": "220" }
     },
-    { "type": "wokwi-rgb-led", "id": "rgb1", "top": 109.6, "left": -46.9, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 109.6,
+      "left": -46.9,
+      "attrs": { "common": "cathode" }
+    },
     {
       "type": "wokwi-resistor",
       "id": "r6",
@@ -83,8 +89,20 @@
       "rotate": 90,
       "attrs": { "value": "220" }
     },
-    { "type": "wokwi-rgb-led", "id": "rgb2", "top": 109.6, "left": 10.7, "attrs": {} },
-    { "type": "wokwi-rgb-led", "id": "rgb3", "top": 109.6, "left": 68.3, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb2",
+      "top": 109.6,
+      "left": 10.7,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb3",
+      "top": 109.6,
+      "left": 68.3,
+      "attrs": { "common": "cathode" }
+    },
     {
       "type": "wokwi-resistor",
       "id": "r12",
