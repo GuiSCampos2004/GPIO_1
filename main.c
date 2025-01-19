@@ -79,6 +79,17 @@ char pico_keypad_get_key()
     return 0; // Nenhuma tecla pressionada
 }
 
+
+// Função para ligar o led vermelho e verde:
+void led_vermelho_verde(){
+    gpio_put(LED2_R, 1);
+    gpio_put(LED1_G, 1);
+    sleep_ms(1000);
+    gpio_put(LED2_R, 0);
+    gpio_put(LED1_G, 0);
+}
+
+
 // Função principal
 int main()
 {
@@ -103,6 +114,10 @@ int main()
 
             switch (key)
             {
+            case '6':
+                led_vermelho_verde();
+                break;
+
             case '8':
                 led_sequence(pins);
                 show_menu = true;
