@@ -10,6 +10,7 @@ void menu()
 
     printf("=== Sistema Iniciado ===\n");
     printf("Pressione uma tecla para escolher uma opcao:\n\n");
+    printf("7 - Acender os LEDs Vermelho e Azul\n");
     printf("8 - Acender os LEDs sequencialmente\n");
 }
 
