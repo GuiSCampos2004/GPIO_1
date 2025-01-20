@@ -75,27 +75,35 @@ int main() {
 
       switch (tecla){
         case '1':
-          
-          
+          gpio_put(BUZZ,1);
+          sleep_ms(100);
+          gpio_put(BUZZ,0);
+          sleep_ms(100);
           mostra_menu = true;
           break;
 
         case '2':
-          gpio_put(LED1_R, 0);
           gpio_put(LED1_G, 1);
-          gpio_put(LED1_B, 0);
-          gpio_put(LED2_R, 0);
           gpio_put(LED2_G, 1);
-          gpio_put(LED2_B, 0);
-          gpio_put(LED3_R, 0);
           gpio_put(LED3_G, 1);
-          gpio_put(LED3_B, 0);
-
+          sleep_ms(100);
+          gpio_put(LED1_G, 0);
+          gpio_put(LED2_G, 0);
+          gpio_put(LED3_G, 0);
+          sleep_ms(100);
+          
           mostra_menu = true;
           break;
 
         case '3':
-          
+          gpio_put(LED1_B, 1);
+          gpio_put(LED2_B, 1);
+          gpio_put(LED3_B, 1);
+          sleep_ms(100);
+          gpio_put(LED1_B, 0);
+          gpio_put(LED2_B, 0);
+          gpio_put(LED3_B, 0);
+          sleep_ms(100);
           
           mostra_menu = true;
           break;
@@ -165,25 +173,56 @@ int main() {
           break;
 
         case 'A':
-          
-          
+          gpio_put(BUZZ,1);
+          gpio_put(LED1_G,1);
+          gpio_put(LED2_G,1);
+          gpio_put(LED3_G,1);
+          sleep_ms(100);
+          gpio_put(BUZZ,0);
+          gpio_put(LED1_G,0);
+          gpio_put(LED2_G,0);
+          gpio_put(LED3_G,0);
+          sleep_ms(100);
           mostra_menu = true;
           break;
 
         case 'B':
-        
-
+          gpio_put(BUZZ,1);
+          gpio_put(LED1_B,1);
+          gpio_put(LED2_B,1);
+          gpio_put(LED3_B,1);
+          sleep_ms(100);
+          gpio_put(BUZZ,0);
+          gpio_put(LED1_B,0);
+          gpio_put(LED2_B,0);
+          gpio_put(LED3_B,0);
+          sleep_ms(100);
           mostra_menu = true;
           break;
 
         case 'C':
-          
-          
+          gpio_put(BUZZ,1);
+          gpio_put(LED1_R,1);
+          gpio_put(LED2_R,1);
+          gpio_put(LED3_R,1);
+          sleep_ms(100);
+          gpio_put(BUZZ,0);
+          gpio_put(LED1_R,0);
+          gpio_put(LED2_R,0);
+          gpio_put(LED3_R,0);
+          sleep_ms(100);
           mostra_menu = true;
           break;
 
         case 'D':
-          
+          for(int i=0;i<10;i++){
+            gpio_put(OUTs[i],1);
+          }
+          sleep_ms(100);
+          for(int i=0;i<10;i++){
+            gpio_put(OUTs[i],0);
+          }
+          sleep_ms(100);
           
           mostra_menu = true;
           break;
@@ -196,9 +235,6 @@ int main() {
         mostra_menu = false;
       }
     }
-
-    busy_wait_us(50000); // 50ms para responsividade
   }
-  
   return 0;
 }
