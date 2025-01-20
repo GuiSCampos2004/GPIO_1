@@ -42,6 +42,7 @@ Os integrantes do grupo trabalharam em conjunto para implementar as diferentes f
  	- Kauan mateus Vidal Brito
   	- Uanderson Rocha Santos
   	- Elioenai Santana
+  	- Diego dos Santos Fonseca
 
 ## Testes
 Cada funcionalidade foi testada individualmente para garantir sua precisão. Após a integração, o programa foi validado para assegurar que todas as conversões funcionam corretamente.
