@@ -91,7 +91,6 @@ int main() {
           gpio_put(LED2_G, 0);
           gpio_put(LED3_G, 0);
           sleep_ms(100);
-          
           mostra_menu = true;
           break;
 
@@ -104,13 +103,18 @@ int main() {
           gpio_put(LED2_B, 0);
           gpio_put(LED3_B, 0);
           sleep_ms(100);
-          
           mostra_menu = true;
           break;
 
         case '4':
-          
-          
+          gpio_put(LED1_R, 1);
+          gpio_put(LED2_R, 1);
+          gpio_put(LED3_R, 1);
+          sleep_ms(100);
+          gpio_put(LED1_R, 0);
+          gpio_put(LED2_R, 0);
+          gpio_put(LED3_R, 0);
+          sleep_ms(100);
           mostra_menu = true;
           break;
 
@@ -223,7 +227,6 @@ int main() {
             gpio_put(OUTs[i],0);
           }
           sleep_ms(100);
-          
           mostra_menu = true;
           break;
 
