@@ -21,6 +21,9 @@ Para uso basta apertar o botão para executar a sua respsctiva funcionalidade de
 - C - Liga Buzzer e LED Vermelho
 - D - Liga Buzzer e todos os LED's
 
+## Link de acesso para video de ensaio
+https://drive.google.com/file/d/1C5mouWhKAaYDdSuEE4J_ka3uh-b8lwJC/view?usp=drive_link
+
 ## Estrutura do Repositório
 main: Versão estável e funcional do programa
 develop: Branch de integração de novas funcionalidades
