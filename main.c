@@ -119,22 +119,7 @@ int main() {
           break;
 
         case '5':
-          gpio_put(LED1_B, 1);
-          gpio_put(LED2_B, 1);
-          gpio_put(LED3_B, 1);
-          gpio_put(LED1_G, 1);
-          gpio_put(LED2_G, 1);
-          gpio_put(LED3_G, 1);
-          sleep_ms(100);
-          gpio_put(LED1_B, 0);
-          gpio_put(LED2_B, 0);
-          gpio_put(LED3_B, 0);
-          gpio_put(LED1_G, 0);
-          gpio_put(LED2_G, 0);
-          gpio_put(LED3_G, 0);
-          sleep_ms(100);
-          mostra_menu = true;
-          break;
+          
           
           mostra_menu = true;
           break;
@@ -186,6 +171,14 @@ int main() {
           break;
 
         case '9':
+          for(int i=0;i<9;i++){
+            gpio_put(OUTs[i],1);
+          }
+          sleep_ms(100);
+          for(int i=0;i<9;i++){
+            gpio_put(OUTs[i],0);
+          }
+          sleep_ms(100);
           
           
           mostra_menu = true;
