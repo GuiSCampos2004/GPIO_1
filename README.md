@@ -34,15 +34,17 @@ Os integrantes do grupo trabalharam em conjunto para implementar as diferentes f
 	- Igor Almeida Oliveira
 	- Guilherme Santos Campos
 	- Aulo Cezar Ferreira dos Anjos Filho
-	- Maria Clara Oliveira Durães
-	- Diego dos Santos Fonseca
 	- Alex Gabriel Alves dos Santos
-	- Hemerson Caires de Souza
-	- Joscielle Santos Pereira
 	- Andréa Carolina Santos Souza
+ 	- Kauan mateus Vidal Brito
+  	- Uanderson Rocha Santos
+  	- Elioenai Santana
 
 ## Testes
 Cada funcionalidade foi testada individualmente para garantir sua precisão. Após a integração, o programa foi validado para assegurar que todas as conversões funcionam corretamente.
+
+## AVISO AO AVALIADOR
+Devido a alguns problemas de compilação e o git, onde ao compilar um projeto o git interfere na pasta build consequentemente interferindo no historico das branchs, muitas modificações tiveram de ser feitas diretamente pelo github.
 
 ## Licença
 Este projeto está licenciado sob a Licença MIT.
