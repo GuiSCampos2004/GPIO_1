@@ -83,7 +83,14 @@ int main() {
           break;
 
         case '2':
-          
+          gpio_put(LED1_G, 1);
+          gpio_put(LED2_G, 1);
+          gpio_put(LED3_G, 1);
+          sleep_ms(100);
+          gpio_put(LED1_G, 0);
+          gpio_put(LED2_G, 0);
+          gpio_put(LED3_G, 0);
+          sleep_ms(100);
           
           mostra_menu = true;
           break;
@@ -228,9 +235,6 @@ int main() {
         mostra_menu = false;
       }
     }
-
-    busy_wait_us(50000); // 50ms para responsividade
   }
-  
   return 0;
 }
