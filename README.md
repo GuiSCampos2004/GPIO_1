@@ -5,7 +5,8 @@
 Este projeto tem como objetivo desenvolver um projeto para praticar o controle de pinos da placa Raspberry Pi Pico W, fazendo uso de um teclado matricial, 3 LED's RGB e um buzzer. O programa foi criado de forma colaborativa, contando com uma equipe de 9 integrantes, com tarefas distribuídas de forma eficiente para otimizar o desenvolvimento.
 
 ## Instruções
-Ao realizar um git clone para uma pasta de seu desejo, importe um projeto para Raspberry Pico W utilizando como localização a pasta onde foi feito o git clone. Após isso, o VSCode irá abrir outra janela com a pasta clonada que possuirá as pastas .vscode e build. Para uso basta apertar o botão para executar a sua respsctiva funcionalidade de acordo com a relação abaixo.
+Ao realizar um git clone para uma pasta de seu desejo, importe um projeto para Raspberry Pico W utilizando como localização a pasta onde foi feito o git clone. Após isso, o VSCode irá abrir outra janela com a pasta clonada que possuirá as pastas .vscode e build, com isso já é possível realizar a compilação do projeto e utilizar o mesmo. 
+Para uso basta apertar o botão para executar a sua respsctiva funcionalidade de acordo com a relação abaixo.
 
 ## Funcionalidades de Cada Botão
 
