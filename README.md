@@ -8,21 +8,28 @@ Este projeto tem como objetivo desenvolver um projeto para praticar o controle d
 Ao realizar um git clone para uma pasta de seu desejo, importe um projeto para Raspberry Pico W utilizando como localização a pasta onde foi feito o git clone. Após isso, o VSCode irá abrir outra janela com a pasta clonada que possuirá as pastas .vscode e build, com isso já é possível realizar a compilação do projeto e utilizar o mesmo. 
 Para uso basta apertar o botão para executar a sua respsctiva funcionalidade de acordo com a relação abaixo.
 
+Aqui está o texto melhorado e formatado em Markdown:
+
 ## Funcionalidades de Cada Botão
 
-- 1 - Liga Buzzer
-- 2 - Liga LED Verde
-- 3 - Liga LED Azul
-- 4 - Liga LED Vermelho
-- 5 - Liga LED's Verde e Azul
-- 6 - Liga LED's Verde e Vermelho
-- 7 - Liga LED's Azul e Vermelho
-- 8 - Liga todos os LED's de forma sequencial
-- 9 - Liga todos os LED's ao mesmo tempo
-- A - Liga Buzzer e LED Verde
-- B - Liga Buzzer e LED Azul
-- C - Liga Buzzer e LED Vermelho
-- D - Liga Buzzer e todos os LED's
+- **'1'**: Animação 1  
+- **'2'**: Animação 2  
+- **'3'**: Animação 3  
+- **'4'**: Animação 4  
+- **'5'**: Animação 5  
+- **'6'**: Animação 6  
+- **'7'**: Animação 7  
+- **'8'**: Animação 8  
+- **'9'**: Animação 9  
+
+### Controle Geral
+
+- **'A'**: Desligar todos os LEDs  
+- **'B'**: Ligar todos os LEDs na cor azul (intensidade máxima)  
+- **'C'**: Ligar todos os LEDs na cor vermelha (80% de intensidade)  
+- **'D'**: Ligar todos os LEDs na cor verde (50% de intensidade)  
+- **'#'**: Ligar todos os LEDs na cor branca (20% de intensidade)  
+
 
 ## Link de acesso para video de ensaio
 https://drive.google.com/file/d/1C5mouWhKAaYDdSuEE4J_ka3uh-b8lwJC/view?usp=drive_link
